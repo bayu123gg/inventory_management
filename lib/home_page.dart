@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inventory_management/add.dart';
 
-
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -11,10 +10,10 @@ class HomePage extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-
           toolbarHeight: 32,
           flexibleSpace: Container(
-            margin: const EdgeInsets.only(top: 4.0), // Adjust the top margin as needed
+            margin: const EdgeInsets.only(
+                top: 4.0), // Adjust the top margin as needed
             child: Row(
               children: [
                 IconButton(
@@ -27,31 +26,22 @@ class HomePage extends StatelessWidget {
           ),
           backgroundColor: const Color.fromARGB(255, 32, 32, 32),
         ),
-
-        
-        body: Column(
+        body: Stack(
           children: <Widget>[
             // Widget utama
-            const Center(
-              child: Text(
-                'Main Content',
-                style: TextStyle(fontSize: 20),
-              ),
-            ),
 
             // Widget box hitam di bagian dasar layar
             Positioned(
-              left: 0,
-              bottom: 50,
+              left: 0.0,
+              bottom: 0.0,
               right: 0,
               child: Container(
                 height: 53,
                 color: const Color.fromARGB(255, 52, 51, 51),
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Row(
-                
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children:  [
+                  children: [
                     IconButton(
                       icon: const CircleAvatar(
                         backgroundColor: Colors.white,
@@ -59,27 +49,21 @@ class HomePage extends StatelessWidget {
                         child: Icon(
                           Icons.add,
                           color: Colors.black,
-                          
                         ),
-                        
-                        
                       ),
-                      
                       onPressed: () {
-                        Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => const Page2()),
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Page2()),
                         );
-                        
                       },
                     ),
-                    
-                    
                   ],
                 ),
               ),
             ),
           ],
-          
         ),
       ),
     );
