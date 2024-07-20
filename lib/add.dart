@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Page2 extends StatelessWidget {
   const Page2({super.key});
@@ -32,6 +31,7 @@ class Page2 extends StatelessWidget {
                     ),
                   ),
                 ),
+
                 // Elemen Expanded di bagian bawah
                 Expanded(
                   flex: 0,
@@ -49,6 +49,39 @@ class Page2 extends StatelessWidget {
                     ),
                   ),
                 ),
+                // Elemen-elemen lain di atas Expanded
+                Container(
+                  padding: const EdgeInsets.all(5.0),
+                  child: const Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'item name',
+                      style: TextStyle(fontSize: 15, color: Colors.white),
+                    ),
+                  ),
+                ),
+                Padding(
+                    padding: const EdgeInsets.only(top: 40.0),
+                    child: Expanded(
+                      // child: const Text(
+                      //   'item description',
+                      //   style: TextStyle(fontSize: 15, color: Colors.white),
+                      // ),
+                      flex: 0,
+                      child: SizedBox(
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            contentPadding: const EdgeInsets.symmetric(
+                                vertical: 10, horizontal: 10),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20.0),
+                            ),
+                            fillColor: const Color.fromARGB(255, 69, 69, 69),
+                            filled: true,
+                          ),
+                        ),
+                      ),
+                    ))
               ],
             )),
       ),

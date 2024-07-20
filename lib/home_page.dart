@@ -26,20 +26,14 @@ class HomePage extends StatelessWidget {
           ),
           backgroundColor: const Color.fromARGB(255, 32, 32, 32),
         ),
-        body: Column(
+        body: Stack(
           children: <Widget>[
             // Widget utama
-            const Center(
-              child: Text(
-                'Main Content',
-                style: TextStyle(fontSize: 20),
-              ),
-            ),
 
             // Widget box hitam di bagian dasar layar
             Positioned(
-              left: 0,
-              bottom: 50,
+              left: 0.0,
+              bottom: 0.0,
               right: 0,
               child: Container(
                 height: 53,
