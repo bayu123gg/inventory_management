@@ -16,74 +16,104 @@ class Page2 extends StatelessWidget {
           backgroundColor: const Color.fromARGB(255, 32, 32, 32),
         ),
         body: Container(
-            color: const Color.fromARGB(
-                255, 32, 31, 31), // Set the background color to black
-            child: Column(
-              children: [
-                // Elemen-elemen lain di atas Expanded
-                Container(
-                  padding: const EdgeInsets.all(5.0),
-                  child: const Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'item name',
-                      style: TextStyle(fontSize: 15, color: Colors.white),
-                    ),
+          color: const Color.fromARGB(
+              255, 32, 31, 31), // Set the background color to black
+          child: Column(
+            children: [
+              // Elemen-elemen lain di atas Expanded
+              const SizedBox(height: 30),
+              const Padding(
+                padding: EdgeInsets.all(5.0),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Item Name',
+                    style: TextStyle(fontSize: 15, color: Colors.white),
                   ),
                 ),
+              ),
 
-                // Elemen Expanded di bagian bawah
-                Expanded(
-                  flex: 0,
-                  child: SizedBox(
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                        contentPadding: const EdgeInsets.symmetric(
-                            vertical: 10, horizontal: 10),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20.0),
-                        ),
-                        fillColor: const Color.fromARGB(255, 69, 69, 69),
-                        filled: true,
+              const SizedBox(height: 10), // Elemen Expanded di bagian bawah
+              Expanded(
+                flex: 0,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      contentPadding: const EdgeInsets.symmetric(
+                          vertical: 10, horizontal: 10),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20.0),
                       ),
+                      fillColor: const Color.fromARGB(255, 69, 69, 69),
+                      filled: true,
                     ),
                   ),
                 ),
-                // Elemen-elemen lain di atas Expanded
-                Container(
-                  padding: const EdgeInsets.all(5.0),
-                  child: const Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'item name',
-                      style: TextStyle(fontSize: 15, color: Colors.white),
+              ),
+
+              const SizedBox(height: 30),
+              const Padding(
+                padding: EdgeInsets.all(5.0),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Quantity',
+                    style: TextStyle(fontSize: 15, color: Colors.white),
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 5), // Expanded TextFormField for Quantity
+              Expanded(
+                flex: 50,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      contentPadding: const EdgeInsets.symmetric(
+                          vertical: 10, horizontal: 10),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      fillColor: const Color.fromARGB(255, 69, 69, 69),
+                      filled: true,
                     ),
                   ),
                 ),
-                Padding(
-                    padding: const EdgeInsets.only(top: 40.0),
-                    child: Expanded(
-                      // child: const Text(
-                      //   'item description',
-                      //   style: TextStyle(fontSize: 15, color: Colors.white),
-                      // ),
-                      flex: 0,
-                      child: SizedBox(
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.symmetric(
-                                vertical: 10, horizontal: 10),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(20.0),
-                            ),
-                            fillColor: const Color.fromARGB(255, 69, 69, 69),
-                            filled: true,
-                          ),
-                        ),
+              ),
+              const Padding(
+                padding: EdgeInsets.all(5.0),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Item fggfe',
+                    style: TextStyle(fontSize: 15, color: Colors.white),
+                  ),
+                ),
+              ),
+
+              // Elemen Expanded di bagian bawah
+              Expanded(
+                flex: 0,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      contentPadding: const EdgeInsets.symmetric(
+                          vertical: 10, horizontal: 10),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20.0),
                       ),
-                    ))
-              ],
-            )),
+                      fillColor: const Color.fromARGB(255, 69, 69, 69),
+                      filled: true,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
