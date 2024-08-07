@@ -1,6 +1,5 @@
 import 'package:inventory_management/components/bar/title.dart';
 import 'package:inventory_management/modules/home/home_controller.dart';
-import 'package:inventory_management/utils/packages.dart';
 import 'package:inventory_management/utils/utils.dart';
 
 class HomeView extends GetView<HomeController> {
