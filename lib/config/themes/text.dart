@@ -116,7 +116,7 @@ class AppTextStyles {
   ///
   /// This style is used for large headings and has a font size of 32,
   /// bold weight, and a default color of black.
-  static const displayLargeStyle = TextStyle(
+  static const TextStyle displayLargeStyle = TextStyle(
     fontSize: 32,
     fontWeight: FontWeight.bold,
     color: Colors.black,
@@ -260,5 +260,157 @@ class AppTextStyles {
     fontSize: 10,
     fontWeight: FontWeight.bold,
     color: Colors.black,
+  );
+
+  //--------------------------------------------------------------------------//
+
+  /// A constant text style for large display text (displayLargeStyle) in dark mode.
+  ///
+  /// This style is used for large headings and has a font size of 32,
+  /// bold weight, and a default color of white.
+  static const TextStyle displayLargeStyleDarkMode = TextStyle(
+    fontSize: 32,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+  );
+
+  /// A constant text style for medium display text (displayMediumStyle) in dark mode.
+  ///
+  /// This style is used for medium headings and has a font size of 28,
+  /// bold weight, and a default color of white.
+  static const TextStyle displayMediumStyleDarkMode = TextStyle(
+    fontSize: 28,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+  );
+
+  /// A constant text style for small display text (displaySmallStyle) in dark mode.
+  ///
+  /// This style is used for small headings and has a font size of 24,
+  /// bold weight, and a default color of white.
+  static const TextStyle displaySmallStyleDarkMode = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+  );
+
+  /// A constant text style for large headline text (headlineLargeStyle) in dark mode.
+  ///
+  /// This style is used for large headlines and has a font size of 22,
+  /// bold weight, and a default color of white.
+  static const TextStyle headlineLargeStyleDarkMode = TextStyle(
+    fontSize: 22,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+  );
+
+  /// A constant text style for medium headline text (headlineMediumStyle) in dark mode.
+  ///
+  /// This style is used for medium headlines and has a font size of 20,
+  /// bold weight, and a default color of white.
+  static const TextStyle headlineMediumStyleDarkMode = TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+  );
+
+  /// A constant text style for small headline text (headlineSmallStyle) in dark mode.
+  ///
+  /// This style is used for small headlines and has a font size of 18,
+  /// bold weight, and a default color of white.
+  static const TextStyle headlineSmallStyleDarkMode = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+  );
+
+  /// A constant text style for large title text (titleLargeStyle) in dark mode.
+  ///
+  /// This style is used for large titles and has a font size of 16,
+  /// bold weight, and a default color of white.
+  static const TextStyle titleLargeStyleDarkMode = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+  );
+
+  /// A constant text style for medium title text (titleMediumStyle) in dark mode.
+  ///
+  /// This style is used for medium titles and has a font size of 14,
+  /// bold weight, and a default color of white.
+  static const TextStyle titleMediumStyleDarkMode = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+  );
+
+  /// A constant text style for small title text (titleSmallStyle) in dark mode.
+  ///
+  /// This style is used for small titles and has a font size of 12,
+  /// bold weight, and a default color of white.
+  static const TextStyle titleSmallStyleDarkMode = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+  );
+
+  /// A constant text style for large body text (bodyLargeStyle) in dark mode.
+  ///
+  /// This style is used for large body text and has a font size of 16,
+  /// normal weight, and a default color of white.
+  static const TextStyle bodyLargeStyleDarkMode = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.normal,
+    color: Colors.white,
+  );
+
+  /// A constant text style for medium body text (bodyMediumStyle) in dark mode.
+  ///
+  /// This style is used for medium body text and has a font size of 14,
+  /// normal weight, and a default color of white.
+  static const TextStyle bodyMediumStyleDarkMode = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.normal,
+    color: Colors.white,
+  );
+
+  /// A constant text style for small body text (bodySmallStyle) in dark mode.
+  ///
+  /// This style is used for small body text and has a font size of 12,
+  /// normal weight, and a default color of white.
+  static const TextStyle bodySmallStyleDarkMode = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.normal,
+    color: Colors.white,
+  );
+
+  /// A constant text style for large label text (labelLargeStyle) in dark mode.
+  ///
+  /// This style is used for large labels and has a font size of 14,
+  /// bold weight, and a default color of white.
+  static const TextStyle labelLargeStyleDarkMode = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+  );
+
+  /// A constant text style for medium label text (labelMediumStyle) in dark mode.
+  ///
+  /// This style is used for medium labels and has a font size of 12,
+  /// bold weight, and a default color of white.
+  static const TextStyle labelMediumStyleDarkMode = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+  );
+
+  /// A constant text style for small label text (labelSmallStyle) in dark mode.
+  ///
+  /// This style is used for small labels and has a font size of 10,
+  /// bold weight, and a default color of white.
+  static const TextStyle labelSmallStyleDarkMode = TextStyle(
+    fontSize: 10,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
   );
 }
