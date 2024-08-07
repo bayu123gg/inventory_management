@@ -53,17 +53,22 @@ class TitleBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Access the current theme using Get.theme
+    final theme = Get.theme;
+
     return AppBar(
       title: Text(
         title,
-        style: AppTextStyles.titleLarge(),
+        style: theme.textTheme.titleLarge ?? AppTextStyles.titleLarge(),
       ),
       leading: IconButton(
         icon: _buildLeadingWidget(),
         onPressed: onIconPressed ?? () => Get.back(),
+        color: theme.colorScheme.onSurface,
       ),
       titleSpacing: 0,
-      backgroundColor: Colors.white,
+      elevation: 0,
+      backgroundColor: theme.colorScheme.surface,
     );
   }
 
