@@ -1,5 +1,7 @@
+import 'package:inventory_management/components/bar/title.dart';
 import 'package:inventory_management/modules/home/home_controller.dart';
 import 'package:inventory_management/utils/packages.dart';
+import 'package:inventory_management/utils/utils.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
@@ -8,22 +10,9 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          toolbarHeight: 32,
-          flexibleSpace: Container(
-            margin: const EdgeInsets.only(
-                top: 4.0), // Adjust the top margin as needed
-            child: Row(
-              children: [
-                IconButton(
-                  icon: Image.asset('images/icon_boxes.png'),
-                  onPressed: () {},
-                ),
-                Image.asset('images/text.png'),
-              ],
-            ),
-          ),
-          backgroundColor: const Color.fromARGB(255, 32, 32, 32),
+        appBar: const TitleBar(
+          title: Application.name,
+          leadingImageAsset: 'lib/assets/icons/icon_box.png',
         ),
         body: Stack(
           children: <Widget>[

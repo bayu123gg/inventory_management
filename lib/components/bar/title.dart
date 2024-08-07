@@ -1,51 +1,54 @@
 import 'package:inventory_management/config/themes/text.dart';
 import 'package:inventory_management/utils/packages.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
-/// A customizable title bar widget that extends the AppBar.
+/// A custom app bar widget that displays a title and a leading icon or image.
 ///
-/// The [TitleBar] widget provides a flexible AppBar with a title, an icon button,
-/// and customizable styles. It allows for a callback when the icon button is pressed,
-/// making it suitable for various use cases in an inventory management application.
+/// This widget can be used as the app bar in various screens of the application.
+/// It allows for customization of the title, leading icon/image, and the action
+/// performed when the leading widget is tapped.
 ///
-/// ## Parameters:
-/// - [title]: A [String] that represents the title displayed in the AppBar.
-/// - [onIconPressed]: An optional callback function of type [VoidCallback] that is called
-///   when the leading icon button is pressed. If not provided, it defaults to navigating
-///   back using `Get.back()`.
-///
-/// ## Usage:
-/// To use the [TitleBar] widget, simply instantiate it within your widget tree,
-/// providing the necessary parameters. For example:
-///
+/// Example usage:
 /// ```dart
 /// TitleBar(
 ///   title: 'Inventory Management',
-///   onIconPressed: () {
-///     // Custom action when the icon is pressed
-///   },
+///   leadingImageAsset: 'assets/images/back_arrow.svg',
+///   isLeadingSvg: true,
+///   onIconPressed: () => Get.back(),
 /// )
 /// ```
-///
-/// ## Customization:
-/// The background color and text style can be customized by modifying the respective
-/// properties in the `AppBar` and `Text` widgets. The default background color is white,
-/// and the title text style is defined in `AppTextStyles.titleLarge()`.
 class TitleBar extends StatelessWidget implements PreferredSizeWidget {
-  /// The title displayed in the AppBar.
+  /// The title displayed in the center of the app bar.
   final String title;
 
-  /// Callback function that is called when the icon button is pressed.
-  /// If null, the default action is to navigate back.
+  /// Callback function triggered when the leading icon/image is pressed.
+  ///
+  /// If not provided, it defaults to `Get.back()`.
   final VoidCallback? onIconPressed;
+
+  /// The asset path for the leading image (PNG or SVG).
+  ///
+  /// If not provided, a default close icon will be displayed.
+  final String? leadingImageAsset;
+
+  /// Indicates whether the [leadingImageAsset] is an SVG file.
+  ///
+  /// Set to `true` for SVG assets, `false` for PNG assets.
+  /// Defaults to `false`.
+  final bool isLeadingSvg;
 
   /// Creates a [TitleBar] widget.
   ///
-  /// The [title] parameter is required and must not be null.
-  /// The [onIconPressed] parameter is optional.
+  /// The [title] parameter is required and sets the text displayed in the app bar.
+  /// [onIconPressed] is optional and defines the action when the leading icon is tapped.
+  /// [leadingImageAsset] is optional and specifies the path to a custom image asset.
+  /// [isLeadingSvg] should be set to `true` if the [leadingImageAsset] is an SVG file.
   const TitleBar({
     super.key,
     required this.title,
     this.onIconPressed,
+    this.leadingImageAsset,
+    this.isLeadingSvg = false,
   });
 
   @override
@@ -56,11 +59,35 @@ class TitleBar extends StatelessWidget implements PreferredSizeWidget {
         style: AppTextStyles.titleLarge(),
       ),
       leading: IconButton(
-        icon: const Icon(Icons.close),
+        icon: _buildLeadingWidget(),
         onPressed: onIconPressed ?? () => Get.back(),
       ),
-      backgroundColor: Colors.white, // Customize as needed
+      titleSpacing: 0,
+      backgroundColor: Colors.white,
     );
+  }
+
+  /// Builds the leading widget based on the provided parameters.
+  ///
+  /// If [leadingImageAsset] is provided, it returns either an SVG or PNG image.
+  /// Otherwise, it returns a default close icon.
+  Widget _buildLeadingWidget() {
+    if (leadingImageAsset != null) {
+      if (isLeadingSvg) {
+        return SvgPicture.asset(
+          leadingImageAsset!,
+          width: 24,
+          height: 24,
+        );
+      } else {
+        return Image.asset(
+          leadingImageAsset!,
+          width: 24,
+          height: 24,
+        );
+      }
+    }
+    return const Icon(Icons.close);
   }
 
   @override
