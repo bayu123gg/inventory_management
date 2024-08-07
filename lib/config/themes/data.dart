@@ -87,7 +87,7 @@ class Themes {
       onTertiary: Colors.white,
       error: AppColors.errorColor,
       onError: Colors.black,
-      surface: Colors.black,
+      surface: const Color.fromARGB(255, 52, 51, 51),
       onSurface: Colors.white,
       errorContainer: Colors.red.shade700,
       onErrorContainer: AppColors.errorColor,
