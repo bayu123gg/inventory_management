@@ -11,7 +11,8 @@ class HomeView extends GetView<HomeController> {
       home: Scaffold(
         appBar: const TitleBar(
           title: Application.name,
-          leadingImageAsset: 'lib/assets/icons/icon_box.png',
+          leadingImageAsset: 'lib/assets/icons/icon_box.svg',
+          isLeadingSvg: true,
         ),
         body: Stack(
           children: <Widget>[

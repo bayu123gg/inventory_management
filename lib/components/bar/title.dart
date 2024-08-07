@@ -83,6 +83,7 @@ class TitleBar extends StatelessWidget implements PreferredSizeWidget {
           leadingImageAsset!,
           width: 24,
           height: 24,
+          color: Get.theme.colorScheme.onSurface,
         );
       } else {
         return Image.asset(
