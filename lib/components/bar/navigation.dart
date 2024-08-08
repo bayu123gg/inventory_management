@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:inventory_management/config/config.dart';
 
 /// A custom navigation bar widget that displays at the bottom of the screen.
 ///
@@ -32,14 +33,12 @@ class NavBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           _buildNavItem(Icons.home, 'Home', () {
-            if (kDebugMode) {
-              print('Home pressed');
-            }
+            // Navigate to the home view.
+            Get.toNamed(RouteNames.home);
           }),
           _buildAddButton(() {
-            if (kDebugMode) {
-              print('Add pressed');
-            }
+            // Navigate to the add view.
+            Get.toNamed(RouteNames.add);
           }),
           _buildNavItem(Icons.person, 'Profile', () {
             if (kDebugMode) {

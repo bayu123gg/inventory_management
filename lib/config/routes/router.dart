@@ -1,4 +1,6 @@
 import 'package:inventory_management/config/routes/names.dart';
+import 'package:inventory_management/modules/add/add_view.dart';
+import 'package:inventory_management/modules/home/home.dart';
 import 'package:inventory_management/utils/packages.dart';
 
 /// A class that defines the application's routing configuration.
@@ -16,7 +18,11 @@ class AppRouter {
     /// The route for the home view.
     ///
     /// This page is displayed when the user navigates to the home route.
-    /// !DEBUG: This page is not yet implemented.
-    GetPage(name: RouteNames.home, page: () => Container()),
+    GetPage(name: RouteNames.home, page: () => const HomeView()),
+
+    /// The route for the add view.
+    ///
+    /// This page is displayed when the user navigates to the add route.
+    GetPage(name: RouteNames.add, page: () => const AddView()),
   ];
 }
