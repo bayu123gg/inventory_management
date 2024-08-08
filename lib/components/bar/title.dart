@@ -96,7 +96,7 @@ class TitleBar extends StatelessWidget implements PreferredSizeWidget {
         );
       }
     }
-    return const Icon(Icons.close);
+    return const Icon(Icons.arrow_back);
   }
 
   @override
