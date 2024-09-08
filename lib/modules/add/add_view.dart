@@ -10,16 +10,17 @@ class AddView extends GetView<HomeController> {
     return const MaterialApp(
       home: Scaffold(
         // Custom app bar with the application name and a leading icon
-        appBar: TitleBar(
-          title: 'Add View',
-          leadingImageAsset: 'lib/assets/icons/icon_box.svg',
-          isLeadingSvg: true,
-        ),
+        appBar: TitleBar(title: 'Add New Item'),
 
         // Main content area of the home screen
         // Currently displays a placeholder text, to be replaced with actual content
-        body: Center(
-          child: Text('Main content goes here'),
+        body: Padding(
+          padding: EdgeInsets.all(16.0),
+          child: Center(
+            child: Text(
+              'Add new item content goes here',
+            ),
+          ),
         ),
       ),
     );
